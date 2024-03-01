@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %} 
+    {{ post.titulo }} 
+{% endblock %} 
+
+{% block contenido %}
+
+<div class="card mb-3">
+  <img
+    src="{{ post.imagen_encabezado}}"
+    class="card-img-top"
+    alt="..."
+    style="height: 40vh"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ post.titulo }}</h5>
+    <div class="container-fluid p-0">
+      <img
+        src="{{ post.avatar }}"
+        alt=""
+        class="rounded-circle"
+        style="width: 3em"
+      />
+      <span><i>{{ post.autor }}</i></span>
+    </div>
+    <p class="card-text">{{ post.contenido | safe }}</p>
+    <p class="card-text">
+      <small class="text-body-secondary"
+        >Publicado: {{ post.fecha_publicacion }}</small
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

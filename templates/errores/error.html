@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Error
+{% endblock %}
+
+{% block contenido %}
+    <section class="jumbotron text-center">
+      <div class="container">
+          <h1 class="jumbotron-heading">{{mensaje}}</h1>
+          <p class="lead text-muted">Error {{status_code}}</p>
+      </div>
+    </section>
+{% endblock %}
